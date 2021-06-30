@@ -1,19 +1,23 @@
-import logo from "./assets/img/pizza-logo.svg";
+import React from "react";
+import logo from "../assets/img/pizza-logo.svg";
 
- export default  function Header() {
+
+import Button  from "./Button";
+
+ export default function Header() {
   return (
     <div className="header">
       <div className="container">
         <div className="header__logo">
-          <img width="38" src={logo} />
+          <img width="38" src={logo} alt='logo' />
           <div>
-            <h1>React Pizza</h1>
-            
+            <h1>React Pizza</h1>  
+                  
             <p>самая вкусная пицца во вселенной</p>
           </div>
         </div>
         <div className="header__cart">
-          <a href="/cart.html" className="button button--cart">
+        <Button outline={false} btncart="button--cart" > 
             <span>520 ₽</span>
             <div className="button__delimiter"></div>
             <svg
@@ -46,7 +50,8 @@ import logo from "./assets/img/pizza-logo.svg";
               />
             </svg>
             <span>3</span>
-          </a>
+                 
+        </Button>
         </div>
       </div>
     </div>
